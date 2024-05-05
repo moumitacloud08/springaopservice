@@ -1,8 +1,8 @@
-package beans;
+package com.example.aopservice.beans;
 
 import org.springframework.stereotype.Component;
 
-@Component("hello_child_bean")
+@Component
 public class HelloChildBean extends HelloBean{
 	
 	@Override

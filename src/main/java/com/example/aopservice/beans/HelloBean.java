@@ -1,4 +1,4 @@
-package beans;
+package com.example.aopservice.beans;
 
 public class HelloBean {
 	public void sayHello(String name) {
