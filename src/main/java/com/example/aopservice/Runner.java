@@ -11,7 +11,7 @@ public class Runner {
 		context.registerShutdownHook();
 		
 		HelloChildBean springBean = context.getBean(HelloChildBean.class);
-		springBean.sayHello("John");
+		springBean.sayHello("John",6);
 		
 
 	}

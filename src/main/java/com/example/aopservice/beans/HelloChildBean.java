@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class HelloChildBean extends HelloBean{
 	
 	@Override
-	public void sayHello(String name) {
+	public void sayHello(String name, int ex) {
 		System.out.println("Hello from Spring Child Bean for "+name);
 	}
 
