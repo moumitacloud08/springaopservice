@@ -4,9 +4,11 @@ import java.io.IOException;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.example.aopservice.beans.DepartmentRepository;
 import com.example.aopservice.beans.HelloChildBean;
 import com.example.aopservice.beans.ITaxBean;
 import com.example.aopservice.beans.TaxBean2;
+import com.example.aopservice.ds.Department;
 import com.example.aopservice.ds.Person;
 
 public class Runner {
@@ -26,6 +28,10 @@ public class Runner {
 		
 		TaxBean2 taxBean2 = context.getBean(TaxBean2.class);
 		taxBean2.calculateTax(10f);
+		
+		DepartmentRepository departmentRepository = context.getBean(DepartmentRepository.class);
+		Department department = departmentRepository.findDepartment("DEPA%");
+		departmentRepository.updateDepartment(5, department);
 	}
 
 }
