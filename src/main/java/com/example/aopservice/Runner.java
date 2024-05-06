@@ -5,6 +5,8 @@ import java.io.IOException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.example.aopservice.beans.HelloChildBean;
+import com.example.aopservice.beans.ITaxBean;
+import com.example.aopservice.beans.TaxBean2;
 import com.example.aopservice.ds.Person;
 
 public class Runner {
@@ -18,7 +20,12 @@ public class Runner {
 		springBean.validateName("John");
 		springBean.saveCounterValue(2);
 		springBean.savePerson(new Person());
-
+		
+		ITaxBean taxBean1 = context.getBean(ITaxBean.class);
+		taxBean1.calculateTax(5f);
+		
+		TaxBean2 taxBean2 = context.getBean(TaxBean2.class);
+		taxBean2.calculateTax(10f);
 	}
 
 }
