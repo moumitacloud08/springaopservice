@@ -3,7 +3,7 @@ package com.example.aopservice.beans;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
 
-@Component
+@Component("hello_child_bean")
 public class HelloChildBean extends HelloBean{
 	
 	@Override
