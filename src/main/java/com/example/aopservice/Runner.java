@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.example.aopservice.beans.HelloChildBean;
+import com.example.aopservice.ds.Person;
 
 public class Runner {
 
@@ -16,6 +17,7 @@ public class Runner {
 		springBean.sayHello("John",6);
 		springBean.validateName("John");
 		springBean.saveCounterValue(2);
+		springBean.savePerson(new Person());
 
 	}
 

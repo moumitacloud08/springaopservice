@@ -68,5 +68,10 @@ public class HelloBeanAspect {
 	public void annotationExample() {
 		System.out.println("Before - annotationExample");
 	}
+	
+	@Before("@args(com.example.aopservice.annotation.CustomValidation)")
+	public void argsAnnotationExample() {
+		System.out.println("Before - @argsExample");
+	}
 
 }
