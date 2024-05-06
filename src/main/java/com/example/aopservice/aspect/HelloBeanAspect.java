@@ -63,5 +63,10 @@ public class HelloBeanAspect {
 	public void beanExample2() {
 		System.out.println("before - beanExample2");
 	}
+	
+	@Before("@annotation(com.example.aopservice.annotation.CustomTransaction)")
+	public void annotationExample() {
+		System.out.println("Before - annotationExample");
+	}
 
 }

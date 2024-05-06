@@ -15,6 +15,7 @@ public class Runner {
 		HelloChildBean springBean = context.getBean(HelloChildBean.class);
 		springBean.sayHello("John",6);
 		springBean.validateName("John");
+		springBean.saveCounterValue(2);
 
 	}
 
