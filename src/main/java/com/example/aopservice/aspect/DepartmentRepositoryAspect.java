@@ -19,10 +19,11 @@ public class DepartmentRepositoryAspect {
 	}
 
 	/**
-	 * – @target – matches method executions inside proxied target class that is
-	 * annotated with specific annotation General Form:@target([annotation_type])
-	 * [annotation_type] – type of annotation used on top of proxied class, inside
-	 * which method execution should be matched
+	 * @target – matches method executions inside proxied target class that is
+	 *         annotated with specific annotation General
+	 *         Form:@target([annotation_type]) [annotation_type] – type of
+	 *         annotation used on top of proxied class, inside which method
+	 *         execution should be matched
 	 */
 	@Before("@target(com.example.aopservice.annotation.MonitoredRepository)")
 	public void annotationTargetExample() {
